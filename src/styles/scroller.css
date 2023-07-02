@@ -1,0 +1,7 @@
+.header-content {
+    height: 100vh;
+    color: white;
+    background-color: black;
+    position: sticky;
+    top: 0;
+}
