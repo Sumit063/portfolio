@@ -1,0 +1,34 @@
+
+.navbar-container {
+    /* background-color: rgb(20,20,58); */
+    color: white;
+    font-family: 'Inknut Antiqua', sans-serif;
+}
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    /* z-index: 1; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar .name-container {
+    justify-self: center;
+}
+
+.navbar-container ul {
+    /* background-color: rgb(20,20,58); */
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-family: 'Share Tech Mono', monospace;
+    color: white;
+    font-size: 14px;
+    line-height: 21px;
+    align-items: center;
+}
+
+.navbar-container li {
+    cursor: pointer;
+}

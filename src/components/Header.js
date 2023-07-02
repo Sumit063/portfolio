@@ -7,9 +7,11 @@ const Header = () => {
     const [ref, inView] = useInView();
     const { scrollY } = useScroll();
     const shrinkScale = useTransform(scrollY, [0, 300], [1, 0.5]);
+    const growScale = useTransform(scrollY, [0, 300], [1, 5]);
+    const colorScale = useTransform(scrollY, [0, 200], ["#FF1B6B", "#45CAFF"]);
     const left = useTransform(scrollY, [0, 400], [0, -1000]);
     const right = useTransform(scrollY, [0, 400], [0, 1000]);
-    console.log(scrollY);
+    const up = useTransform(scrollY, [0, 400], [0, -500]);
     const variants = {
         visible : {opacity: 1, scale: 1, transition: { delay: 1, duration: 0.5}},
         hidden : { opacity: 0, scale: 0}
@@ -35,7 +37,7 @@ const Header = () => {
             
                 <motion.p
                 whileHover={{ scale: 1.2 }}
-                style={{ x: left }}
+                style={{ x: left, scale: growScale}}
                 >
                     {"<"}
                 </motion.p>
@@ -45,13 +47,13 @@ const Header = () => {
                 dragElastic={0.3}
                 >
                     <div className='name-container'>
-                    <motion.p whileHover={{ scale: 1.2 }}>S</motion.p> 
+                    <motion.p whileHover={{ scale: 1.2 }} style={{color: colorScale}}>S</motion.p> 
                     <motion.p whileHover={{ scale: 1.2 }}>U</motion.p> 
                     <motion.p whileHover={{ scale: 1.2 }}>M</motion.p> 
                     <motion.p whileHover={{ scale: 1.2 }}>I</motion.p> 
                     <motion.p whileHover={{ scale: 1.2 }}>T</motion.p> 
                     <motion.p whileHover={{ scale: 1.2 }}> &nbsp;</motion.p> 
-                    <motion.p whileHover={{ scale: 1.2 }}>P</motion.p> 
+                    <motion.p whileHover={{ scale: 1.2 }} style={{color: colorScale}}>P</motion.p> 
                     <motion.p whileHover={{ scale: 1.2 }}>A</motion.p> 
                     <motion.p whileHover={{ scale: 1.2 }}>N</motion.p> 
                     <motion.p whileHover={{ scale: 1.2 }}>D</motion.p> 
@@ -60,12 +62,13 @@ const Header = () => {
                     </div>
                 </motion.h1>
                 <motion.p
-                whileHover={{ scale: 1.2 }}>
+                whileHover={{ scale: 1.2 }}
+                style={{y: up, rotate: up, scale: growScale, color: colorScale}}>
                     /
                 </motion.p>
                 <motion.p
                 whileHover={{ scale: 1.2 }}
-                style={{ x: right }}
+                style={{ x: right, scale: growScale, cursor: 'pointer'}}
                 >
                     {">"}
                 </motion.p>
