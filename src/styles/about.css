@@ -1,0 +1,41 @@
+.about-container {
+    padding: 60px 0;
+    background-color: #0D012C;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.about-me {
+    font-size: 15px;
+    background-blend-mode: multiply;
+    background: #14143A bottom right url('../components/man.png') no-repeat;
+    background-size: 40%;
+    /* background-attachment: fixed; */
+    mix-blend-mode: lighten;
+    z-index: 2;
+    padding: 20px;
+    width: 30%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 1px 1px 4px black;
+    border-radius: 10px;
+}
+
+.about-me .about-me-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-me h3{
+    color: #59C378;
+}
+
+.about-me h4 {
+    font-size: 30px;
+}

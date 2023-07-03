@@ -1,20 +1,17 @@
 
 .navbar-container {
-    /* background-color: rgb(20,20,58); */
     color: white;
     font-family: 'Inknut Antiqua', sans-serif;
 }
 .navbar {
+    padding: 15px 0 ;
+    background-color: #0D012C;
     width: 100%;
     position: fixed;
     top: 0;
-    /* z-index: 1; */
+    z-index: 10;
     display: flex;
     justify-content: space-between;
-}
-
-.navbar .name-container {
-    justify-self: center;
 }
 
 .navbar-container ul {
@@ -27,8 +24,13 @@
     font-size: 14px;
     line-height: 21px;
     align-items: center;
+    font-weight: 500;
+    margin-right: 30px;
 }
 
 .navbar-container li {
     cursor: pointer;
+}
+.navbar-container :hover {
+    
 }

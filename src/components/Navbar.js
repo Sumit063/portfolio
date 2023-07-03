@@ -1,14 +1,17 @@
 import React from 'react'
 import "../styles/nav.css"
 import Name from './Name'
-import { motion, useScroll } from 'framer-motion'
+import { color, easeIn, motion, spring, useScroll, useTransform } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = (referenece) => {
+    const { scrollY } = useScroll();
+    const left = useTransform(scrollY, [450,1000], [30, -550]);
+
     const variants = {
         visible : {opacity: 1, scale: 1},
         hidden : { opacity: 0, scale: 0}
     };
-    const { scrollY } = useScroll();
     const [visible, setVisible] = React.useState(false);
     function update() {
         if (scrollY?.current > 350) {
@@ -33,18 +36,18 @@ const Navbar = () => {
         <motion.nav className='navbar' 
         initial="hidden"
         animate={visible ? "visible" : "hidden"}
-        variants={variants}>
+        variants={variants}
+        >
             <div style={{width:150}}>
-
             </div>
-            <div className='name-container'>
+            <motion.div className='name-container' style={{x: left}}>
             <Name />
-            </div>
+            </motion.div>
             <ul>
-                <li>ABOUT</li>
-                <li>SKILLS</li>
-                <li>MY WORK</li>
-                <li>CONTACT</li>
+                <motion.li whileHover={{color:'#59C378', borderBottom:'2px solid', borderRadius: 3}}>ABOUT</motion.li>
+                <motion.li whileHover={{color:'#59C378', borderBottom:'2px solid', borderRadius: 3}}>SKILLS</motion.li>
+                <motion.li whileHover={{color:'#59C378', borderBottom:'2px solid', borderRadius: 3}}>MY WORK</motion.li>
+                <motion.li whileHover={{color:'#59C378', borderBottom:'2px solid', borderRadius: 3}}>CONTACT</motion.li>
             </ul>
         </motion.nav>
     </div>

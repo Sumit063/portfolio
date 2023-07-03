@@ -1,0 +1,45 @@
+.main-container {
+    scroll-snap-align: start;
+    /* scroll-snap-stop: always; */
+
+    /* padding-bottom: 40px; */
+    box-sizing: border-box;
+    padding: 0 60px;
+    /* background-color: #0D012C; */
+    background: rgb(17,6,56);
+background: -moz-linear-gradient(11deg, rgba(17,6,56,1) 0%, rgba(20,17,67,1) 17%, rgba(16,32,75,1) 28%, rgba(52,29,67,1) 68%, rgba(43,19,67,1) 96%, rgba(29,3,66,1) 100%);
+background: -webkit-linear-gradient(11deg, rgba(17,6,56,1) 0%, rgba(20,17,67,1) 17%, rgba(16,32,75,1) 28%, rgba(52,29,67,1) 68%, rgba(43,19,67,1) 96%, rgba(29,3,66,1) 100%);
+background: linear-gradient(11deg, rgba(17,6,56,1) 0%, rgba(20,17,67,1) 17%, rgba(16,32,75,1) 28%, rgba(52,29,67,1) 68%, rgba(43,19,67,1) 96%, rgba(29,3,66,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#110638",endColorstr="#1d0342",GradientType=1);
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-container .main-left {
+    width: 50%;
+}
+
+.intro {
+    font-family: 'Jost', sans-serif;
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+}
+.intro h2 {
+    font-size: 60px;
+    line-height: 70px;
+    color: #c7c8d3; 
+    margin-bottom: 20px;
+}
+
+.intro span {
+    background: linear-gradient(to right,rgb(168, 71, 216), rgb(212, 4, 4));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+.intro p {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    color: #cccccc;
+    line-height: 30px;
+}

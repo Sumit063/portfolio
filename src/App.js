@@ -1,7 +1,7 @@
 
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
-import ShrinkSection from './components/ShrinkSection';
+import About from './components/About';
 
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element= {<Home />} />
-        {/* <Route path="/" element= {<ShrinkSection/>} /> */}
+        <Route path="/about" element= {<About />} />
       </Routes>
     </div>
   );

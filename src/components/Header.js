@@ -8,7 +8,7 @@ const Header = () => {
     const { scrollY } = useScroll();
     const shrinkScale = useTransform(scrollY, [0, 300], [1, 0.5]);
     const growScale = useTransform(scrollY, [0, 300], [1, 5]);
-    const colorScale = useTransform(scrollY, [0, 200], ["#FF1B6B", "#45CAFF"]);
+    const colorScale = useTransform(scrollY, [50, 200], ["#59C378", "#45CAFF"]);
     const left = useTransform(scrollY, [0, 400], [0, -1000]);
     const right = useTransform(scrollY, [0, 400], [0, 1000]);
     const up = useTransform(scrollY, [0, 400], [0, -500]);
@@ -29,12 +29,8 @@ const Header = () => {
     }, [controls, inView]);
   return (
         <motion.div
-        className='header-text'
-        style={{
-            scale: shrinkScale,
-        }}
+        className='header-text snapper'
         >
-            
                 <motion.p
                 whileHover={{ scale: 1.2 }}
                 style={{ x: left, scale: growScale}}
@@ -46,7 +42,9 @@ const Header = () => {
                 dragConstraints={{top:10, left: 10, right: 10, bottom: 10}}
                 dragElastic={0.3}
                 >
-                    <div className='name-container'>
+                <motion.div className='name-container' style={{
+                scale: shrinkScale,
+                }}>
                     <motion.p whileHover={{ scale: 1.2 }} style={{color: colorScale}}>S</motion.p> 
                     <motion.p whileHover={{ scale: 1.2 }}>U</motion.p> 
                     <motion.p whileHover={{ scale: 1.2 }}>M</motion.p> 
@@ -59,7 +57,7 @@ const Header = () => {
                     <motion.p whileHover={{ scale: 1.2 }}>D</motion.p> 
                     <motion.p whileHover={{ scale: 1.2 }}>E</motion.p> 
                     <motion.p whileHover={{ scale: 1.2 }}>Y</motion.p> 
-                    </div>
+                </motion.div>
                 </motion.h1>
                 <motion.p
                 whileHover={{ scale: 1.2 }}
