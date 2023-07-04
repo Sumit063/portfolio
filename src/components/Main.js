@@ -4,6 +4,7 @@ import Navbar from './Navbar'
 import Lottie from 'react-lottie'
 import animationData from '../lotties/developer.json'
 import About from './About';
+import Skills from './Skills.js';
 
 
 const Main = () => {
@@ -36,6 +37,7 @@ const Main = () => {
         </div>
     </div>
     <About />
+    <Skills />
     </>
   )
 }

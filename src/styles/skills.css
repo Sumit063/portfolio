@@ -1,0 +1,54 @@
+.skills-section, .cards-container {
+    background-color: #0D012C;
+    padding: 20px;
+}
+
+.card-container {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: #14143A ;
+    font-size: 1em;
+    padding: 20px;
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    box-sizing: border-box;
+    -webkit-filter: drop-shadow(0 .5rem .3em rgba(0,0,0,.5));
+    transform: translate3d(0, 0, 0);
+}
+
+/* .card-container {
+    line-height: .8em;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0,0,0,.15);
+    letter-spacing: -2px;
+    display: block;
+    width: 6rem;
+    height: 4rem;
+    color: white;
+    background-color: #14143A;
+    margin: 1em .5em 0;
+    padding-top: 1rem;
+    position: relative;
+    
+}
+
+.card-container :after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-right: 3rem solid transparent;
+    border-left: 3rem solid transparent;
+    border-top: 1.5rem solid #CCCCCC;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+} */
