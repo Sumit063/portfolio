@@ -24,6 +24,7 @@
 .name-container {
     display: flex;
     gap: 5px;
+    cursor: none;
 }
 
 .braces {

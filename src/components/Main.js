@@ -6,6 +6,7 @@ import animationData from '../lotties/developer.json'
 import About from './About';
 import Skills from './Skills.js';
 import Projects from './ProjectCard';
+import Contact from './Contact'
 
 
 const Main = () => {
@@ -40,6 +41,7 @@ const Main = () => {
     <About />
     <Skills />
     <Projects />
+    <Contact />
     </>
   )
 }

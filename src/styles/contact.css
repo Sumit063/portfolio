@@ -1,0 +1,51 @@
+.contact-section {
+    padding: 40px;
+    background-color: #0D012C;
+}
+
+.contact-wrapper {
+    background-color: #0C0122;
+    border-radius: 20px;
+    padding: 40px 35px;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+
+#contact-txt2 {
+    color: #CCCCCC;
+}
+
+.contact-wrapper h4 {
+    padding-bottom: 10px;
+    line-height: 30px;
+}
+
+.contact-me h3 {
+    padding-bottom: 23px;
+    font-size: 13px;
+}
+.newsletter h3 {
+    padding-bottom: 23px;
+}
+
+.newsletter-inputs {
+    margin: 25px 0 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.input-field .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+    border-color: white;
+  }
+
+.subscribe-btn {
+    width: fit-content;
+}
+
+.subscribed {
+    opacity: 0;
+  }
+
+  .tick {
+    opacity: 1;
+  }

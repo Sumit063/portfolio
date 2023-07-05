@@ -10,7 +10,6 @@ const Home = () => {
     <div className='scroll-snapper'>
     <Header />
     <Main />
-    <SampleText />
     </div>
   )
 }

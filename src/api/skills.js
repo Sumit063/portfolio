@@ -11,10 +11,10 @@ export const skills = [
     icon: <Icon icon="skill-icons:css" width="50"/>,
     skill: "CSS3"
     },
-    {
+    {   
     id: 3,
-    icon: <Icon icon="skill-icons:react-dark" width="50"/>,
-    skill: "ReactJS"
+    icon: <Icon icon="skill-icons:mysql-dark" width="50"/>,
+    skill: "SQL"
     },
     {
     id: 4,
@@ -31,15 +31,15 @@ export const skills = [
     icon: <Icon icon="skill-icons:github-dark" width="50"/>,
     skill: "GitHub"
     },
-    {   
+    {
     id: 7,
-    icon: <Icon icon="skill-icons:tailwindcss-dark" width="50"/>,
-    skill: "TailWind"
+    icon: <Icon icon="skill-icons:react-dark" width="50"/>,
+    skill: "ReactJS"
     },
     {   
     id: 8,
-    icon: <Icon icon="skill-icons:mysql-dark" width="50"/>,
-    skill: "SQL"
+    icon: <Icon icon="skill-icons:tailwindcss-dark" width="50"/>,
+    skill: "TailWind"
     },
     {   
     id: 9,

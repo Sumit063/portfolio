@@ -3,7 +3,7 @@ import '../styles/about.css'
 import img from './man.png'
 import Lottie from 'react-lottie'
 import userLottie from '../lotties/user.json'
-import { DownloadBtn } from './DownloadBtn'
+import { DownloadBtn } from './Buttons'
 
 const About = () => {
   const defaultOptions = {

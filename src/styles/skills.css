@@ -25,6 +25,11 @@
     -webkit-filter: drop-shadow(0 .4rem .4em rgba(0,0,0,.5));
     transform: translate3d(0, 0, 0);
     cursor: pointer;
+    border: 1px solid #202044;
+}
+
+.card-container:hover {
+    border-bottom: 1.5px solid #202044;
 }
 
 

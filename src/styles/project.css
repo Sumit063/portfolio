@@ -20,6 +20,13 @@
     color: white;
     box-sizing: border-box;
     cursor: pointer;
+    border: 1.5px solid #202044;
+    transition: ease-in;
+    transition-duration: 250ms;
+}
+
+.project-card-container:hover {
+    border-bottom: 1px solid #59C378;
 }
 
 .project-section h4{
@@ -28,17 +35,18 @@
 }
 
 .project-img {
-    border-radius: 12px;
+    /* border-radius: 80%; */
 }
 .project-img img{
     width: 100%;
     transition: ease-in;
-    transition-duration: 100ms;
+    transition-duration: 150ms;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .project-img img:hover {
     scale: 1.05;
-    border-radius: 10px;
 }
 
 .project-tech {
@@ -55,10 +63,12 @@
 }
 
 .project-about {
-    font-size: 12px;
+    font-size: 13px;
     text-align: left;
-    padding: 0 20px;
-    color: rgb(229, 223, 223);
+    line-height: 21px;
+    font-weight: 300;
+    padding: 25px;
+    color: #cccccc;
 }
 
 .project-live {
@@ -69,15 +79,19 @@
 }
 .project-live a{
     text-decoration: none;
-    color: rgb(164, 163, 163);
+    color: #7E8B9E;
     font-size: 12px;
     align-items: center;
+    transition: ease-in;
+    transition-duration: 200ms;
 }
 
 .project-site, .project-source {
     display: flex;
     gap: 5px;
     align-items: center;
+    transition: ease-in;
+    transition-duration: 200ms;
 }
 
 .project-site:hover, .project-source:hover {
@@ -85,5 +99,5 @@
     color: #59C378;
 }
 .project-site:hover a, .project-source:hover a {
-    color: white;
+    color: rgb(178, 178, 178);
 }
