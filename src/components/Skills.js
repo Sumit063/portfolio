@@ -9,11 +9,11 @@ const Skills = () => {
         superLargeDesktop: {
           // the naming can be any, depends on you.
           breakpoint: { max: 4000, min: 3000 },
-          items: 2
+          items: 5
         },
         desktop: {
           breakpoint: { max: 3000, min: 1024 },
-          items: 2
+          items: 7
         },
         tablet: {
           breakpoint: { max: 1024, min: 464 },
@@ -28,8 +28,21 @@ const Skills = () => {
   return (
     <>
     <div className='skills-section'>
+      <h3>MY SKILLS SO FAR</h3>
+      <h4>What I work on</h4>
         <div className='cards-container'>
-        <Carousel responsive={responsive}>
+        <Carousel swipeable={true}
+          draggable={true}
+          responsive={responsive}
+          infinite={true}
+          autoPlay={true}
+          autoPlaySpeed={2000}
+          // customTransition="transform 300ms ease-in-out"
+          // transitionDuration={1000}
+          slidesToSlide={1}
+          containerClass="cards-container"
+          removeArrowOnDeviceType='{["tablet", "mobile", "desktop", "superLargeDesktop"]}'
+          itemClass="carousel-item-padding-40-px">
         {skills.map((skill) => (
                 <div className='card-container'>
                     <div className='skill-logo'>

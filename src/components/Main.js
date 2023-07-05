@@ -5,6 +5,7 @@ import Lottie from 'react-lottie'
 import animationData from '../lotties/developer.json'
 import About from './About';
 import Skills from './Skills.js';
+import Projects from './ProjectCard';
 
 
 const Main = () => {
@@ -38,6 +39,7 @@ const Main = () => {
     </div>
     <About />
     <Skills />
+    <Projects />
     </>
   )
 }
