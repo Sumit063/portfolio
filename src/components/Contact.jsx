@@ -3,7 +3,6 @@ import { MailBtn } from './Buttons'
 import { SubscribeBtn } from './Buttons'
 import '../styles/contact.css'
 import { TextField } from '@mui/material'
-import { color } from 'framer-motion'
 
 const Contact = () => {
     const [email, setEmail] = useState('');

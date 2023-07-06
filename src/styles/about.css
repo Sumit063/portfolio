@@ -8,7 +8,8 @@
 .about-me {
     font-size: 15px;
     background-blend-mode: multiply;
-    background: #14143A bottom right url('../components/man.png') no-repeat;
+    /* background: #14143A bottom right url('../components/man.png') no-repeat; */
+    background: #14143A;
     background-size: 40%;
     /* background-attachment: fixed; */
     mix-blend-mode: lighten;

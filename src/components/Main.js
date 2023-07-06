@@ -7,6 +7,7 @@ import About from './About';
 import Skills from './Skills.js';
 import Projects from './ProjectCard';
 import Contact from './Contact'
+import SampleText from './SampleText'
 
 
 const Main = () => {
@@ -39,9 +40,10 @@ const Main = () => {
         </div>
     </div>
     <About />
-    <Skills />
+     <Skills />
     <Projects />
-    <Contact />
+    <Contact /> 
+    {/* <SampleText /> */}
     </>
   )
 }
