@@ -20,7 +20,7 @@ const About = () => {
       <Lottie 
 	    options={defaultOptions}
         height={400}
-        width={400}
+        width={290}
         />
       </div>
       <div className='about-me'>

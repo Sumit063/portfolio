@@ -4,7 +4,11 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    row-gap: 30px;
 }
+
+
+
 .about-me {
     font-size: 15px;
     background-blend-mode: multiply;
@@ -16,12 +20,13 @@
     z-index: 2;
     padding: 20px;
     width: 30%;
-    display: flex;
+    /* display: flex; */
     text-align: center;
     justify-content: center;
     box-sizing: border-box;
     box-shadow: 1px 1px 1px 1px 4px black;
     border-radius: 10px;
+    min-width: 300px;
 }
 
 .about-me .about-me-text {
@@ -39,4 +44,10 @@
 
  h4 {
     font-size: 30px;
+}
+
+@media only screen and (max-width: 900px) {
+    .about-container {
+        flex-direction: column;
+    }
 }

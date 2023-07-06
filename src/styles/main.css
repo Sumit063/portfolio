@@ -1,18 +1,15 @@
 .main-container {
     scroll-snap-align: start;
-    /* scroll-snap-stop: always; */
-
-    /* padding-bottom: 40px; */
     box-sizing: border-box;
     padding: 0 60px;
-    /* background-color: #0D012C; */
     background: rgb(17,6,56);
-background: -moz-linear-gradient(11deg, rgba(17,6,56,1) 0%, rgba(20,17,67,1) 17%, rgba(16,32,75,1) 28%, rgba(52,29,67,1) 68%, rgba(43,19,67,1) 96%, rgba(29,3,66,1) 100%);
-background: -webkit-linear-gradient(11deg, rgba(17,6,56,1) 0%, rgba(20,17,67,1) 17%, rgba(16,32,75,1) 28%, rgba(52,29,67,1) 68%, rgba(43,19,67,1) 96%, rgba(29,3,66,1) 100%);
-background: linear-gradient(11deg, rgba(17,6,56,1) 0%, rgba(20,17,67,1) 17%, rgba(16,32,75,1) 28%, rgba(52,29,67,1) 68%, rgba(43,19,67,1) 96%, rgba(29,3,66,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#110638",endColorstr="#1d0342",GradientType=1);
+    background: -moz-linear-gradient(11deg, rgba(17,6,56,1) 0%, rgba(20,17,67,1) 17%, rgba(16,32,75,1) 28%, rgba(52,29,67,1) 68%, rgba(43,19,67,1) 96%, rgba(29,3,66,1) 100%);
+    background: -webkit-linear-gradient(11deg, rgba(17,6,56,1) 0%, rgba(20,17,67,1) 17%, rgba(16,32,75,1) 28%, rgba(52,29,67,1) 68%, rgba(43,19,67,1) 96%, rgba(29,3,66,1) 100%);
+    background: linear-gradient(11deg, rgba(17,6,56,1) 0%, rgba(20,17,67,1) 17%, rgba(16,32,75,1) 28%, rgba(52,29,67,1) 68%, rgba(43,19,67,1) 96%, rgba(29,3,66,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#110638",endColorstr="#1d0342",GradientType=1);
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .main-container .main-left {
@@ -42,4 +39,25 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#110638",endCo
     font-size: 18px;
     color: #cccccc;
     line-height: 30px;
+}
+
+@media only screen and (max-width: 917px) {
+    .main-container .main-left {
+        width: 100%;
+    }
+
+    .intro h2{
+        font-size: 40px;
+    }
+
+
+    .right {
+        scale: 0.8;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .right {
+        scale: 0.6;
+    }
 }

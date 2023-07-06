@@ -15,17 +15,21 @@ const Projects = () => {
           items: 3
         },
         desktop: {
-          breakpoint: { max: 3000, min: 1024 },
+          breakpoint: { max: 3000, min: 1400 },
           items: 3
         },
+        laptop: {
+          breakpoint: { max: 1400, min: 1200 },
+          items: 2
+        },
+        tabletBig: {
+          breakpoint: { max: 1200, min: 1070 },
+          items: 2
+        },
         tablet: {
-          breakpoint: { max: 1024, min: 464 },
+          breakpoint: { max: 1070, min: 0 },
           items: 1
         },
-        mobile: {
-          breakpoint: { max: 464, min: 0 },
-          items: 1
-        }
       };
 
   return (

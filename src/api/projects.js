@@ -21,5 +21,15 @@ export const projects = [
         about: "ReactJs movie app that allows search movies and TV series",
         site: "https://hbomoviemania.netlify.app",
         source: "https://github.com/Sumit063/HBO-MovieMania"
+    },
+    {
+        id: 2,
+        img: movies,
+        img2: portfolio,
+        name: "HBO - Movie Mania",
+        tech: "REACTJS | MATERIAL-UI",
+        about: "ReactJs movie app that allows search movies and TV series",
+        site: "https://hbomoviemania.netlify.app",
+        source: "https://github.com/Sumit063/HBO-MovieMania"
     }
 ];

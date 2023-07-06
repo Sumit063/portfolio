@@ -9,19 +9,27 @@ const Skills = () => {
         superLargeDesktop: {
           // the naming can be any, depends on you.
           breakpoint: { max: 4000, min: 3000 },
-          items: 5
+          items: 10
         },
         desktop: {
-          breakpoint: { max: 3000, min: 1024 },
+          breakpoint: { max: 3000, min: 1324 },
           items: 7
         },
         tablet: {
-          breakpoint: { max: 1024, min: 464 },
-          items: 2
+          breakpoint: { max: 1324, min: 922},
+          items: 5
+        },
+        smallTablet: {
+          breakpoint: {max: 922, min: 800 },
+          items: 4
+        },
+        bigMobile: {
+          breakpoint: { max: 800, min: 460 },
+          items: 3
         },
         mobile: {
-          breakpoint: { max: 464, min: 0 },
-          items: 2
+          breakpoint: { max: 460, min: 0 },
+          items: 1
         }
       };
 
@@ -41,8 +49,8 @@ const Skills = () => {
           // transitionDuration={1000}
           slidesToSlide={1}
           containerClass="cards-container"
-          removeArrowOnDeviceType='{["tablet", "mobile", "desktop", "superLargeDesktop"]}'
-          itemClass="carousel-item-padding-40-px">
+          removeArrowOnDeviceType='{["smallTablet","bigMobile","tablet", "mobile", "desktop", "superLargeDesktop"]}'
+          >
         {skills.map((skill) => (
                 <div className='card-container'>
                     <div className='skill-logo'>

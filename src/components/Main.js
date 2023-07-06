@@ -23,7 +23,7 @@ const Main = () => {
   return (
     <>
     <Navbar/>
-    <div className='main-container snapper' style={{paddingTop: 60, paddingBottom: 60}}>
+    <div className='main-container' style={{paddingTop: 60, paddingBottom: 60}}>
         <div className='main-left'>
             <div className="intro">
                 <h1>{ intro.hi }<span>!</span>&nbsp; { intro.intro }<span>.</span> </h1>
