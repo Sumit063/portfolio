@@ -2,11 +2,14 @@ import React from 'react'
 import "../styles/nav.css"
 import Name from './Name'
 import { color, easeIn, motion, spring, useScroll, useTransform } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-scroll';
 
 const Navbar = (referenece) => {
-    const { scrollY } = useScroll();
-    const left = useTransform(scrollY, [450,1000], [30, -550]);
+    const { scrollX,scrollY } = useScroll();
+    const viewportWidth = window.innerWidth;
+    const maxScroll = viewportWidth /2 - 210;
+    const left = useTransform(scrollY, [450,1000], [10, -maxScroll]);
+    const maxScrollX = useTransform(scrollX, value => Math.max(0, value));
 
     const variants = {
         visible : {opacity: 1, scale: 1},
@@ -40,14 +43,14 @@ const Navbar = (referenece) => {
         >
             <div style={{width:150}}>
             </div>
-            <motion.div className='name-container' style={{x: left}}>
+            <motion.div className='name-container' style={{ x: left}}>
             <Name />
             </motion.div>
             <ul>
-                <motion.li whileHover={{color:'#59C378', borderBottom:'2px solid', borderRadius: 3}}>ABOUT</motion.li>
-                <motion.li whileHover={{color:'#59C378', borderBottom:'2px solid', borderRadius: 3}}>SKILLS</motion.li>
-                <motion.li whileHover={{color:'#59C378', borderBottom:'2px solid', borderRadius: 3}}>MY WORK</motion.li>
-                <motion.li whileHover={{color:'#59C378', borderBottom:'2px solid', borderRadius: 3}}>CONTACT</motion.li>
+                <motion.li whileHover={{color:'#59C378', borderBottom:'2px solid', borderRadius: 3}}><Link to='about' smooth duration={500}>ABOUT</Link></motion.li>
+                <motion.li whileHover={{color:'#59C378', borderBottom:'2px solid', borderRadius: 3}}><Link to='skills' smooth duration={500}>SKILLS</Link></motion.li>
+                <motion.li whileHover={{color:'#59C378', borderBottom:'2px solid', borderRadius: 3}}><Link to='work' smooth duration={500}>MY WORK</Link></motion.li>
+                <motion.li whileHover={{color:'#59C378', borderBottom:'2px solid', borderRadius: 3}}><Link to='contact' smooth duration={500}>CONTACT</Link></motion.li>
             </ul>
         </motion.nav>
     </div>

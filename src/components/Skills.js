@@ -35,7 +35,7 @@ const Skills = () => {
 
   return (
     <>
-    <div className='skills-section'>
+    <div name='skills' className='skills-section'>
       <h3>MY SKILLS SO FAR</h3>
       <h4>What I work on</h4>
         <div className='cards-container'>

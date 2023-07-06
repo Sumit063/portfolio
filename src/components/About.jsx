@@ -15,7 +15,7 @@ const About = () => {
     }
   };
   return (
-    <div className='about-container snapper'>
+    <div name='about' className='about-container snapper'>
       <div className='lottie-wrapper'>
       <Lottie 
 	    options={defaultOptions}

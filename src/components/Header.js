@@ -31,6 +31,7 @@ const Header = () => {
         <motion.div
         className='header-text snapper'
         >
+            <div className='name'>
                 <motion.p
                 whileHover={{ scale: 1.2 }}
                 style={{ x: left, scale: growScale}}
@@ -82,6 +83,7 @@ const Header = () => {
                 <p>{"{ "}</p>
                 <p>{"}"}</p>
                 </motion.div> */}
+                </div>
         </motion.div>
   )
 }

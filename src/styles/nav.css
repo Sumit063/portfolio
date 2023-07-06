@@ -14,6 +14,7 @@
     justify-content: space-between;
 }
 
+
 .navbar-container ul {
     /* background-color: rgb(20,20,58); */
     display: flex;
@@ -34,4 +35,10 @@
 }
 .navbar-container :hover {
     
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar-container ul {
+        opacity: 0;
+    }
 }

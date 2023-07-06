@@ -9,11 +9,8 @@
 .header-text {
     /* scroll-snap-stop: always; */
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    align-items: center;
-    height: 100vh;
+    
+   
     background-color: #0D012C;
     /* background-color: #0C0122; */
     color: whitesmoke;
@@ -21,6 +18,15 @@
     font-size: 60px;
     line-height: 120px;
 }
+
+.name {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    height: 100vh;
+}
+
 .name-container {
     display: flex;
     gap: 5px;
@@ -35,3 +41,18 @@
     font-size: 100px;
 }
 
+@media only screen and (max-width: 1350px) {
+    .name {
+        scale: 0.75;
+    }
+}
+@media only screen and (max-width: 1110px) {
+    .name {
+        scale: 0.55;
+    }
+}
+@media only screen and (max-width: 710px) {
+    .name {
+        scale: 0.25;
+    }
+}

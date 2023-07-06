@@ -34,7 +34,7 @@ const Projects = () => {
 
   return (
     <>
-    <div className='project-section'>
+    <div name='work' className='project-section'>
       <h3>CHECK OUT MY PROJECTS</h3>
       <h4>My Works</h4>
         <div className='project-cards-container'>
