@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import {projects} from '../api/projects';
 import { Icon } from '@iconify/react';
 import '../styles/project.css';
+import { motion, useInView } from 'framer-motion';
 
 
 
 const Projects = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
     const responsive = {
         superLargeDesktop: {
           // the naming can be any, depends on you.
@@ -35,8 +38,13 @@ const Projects = () => {
   return (
     <>
     <div name='work' className='project-section'>
+      <motion.div ref = {ref} style={{transform: isInView ? "none" : "translateY(20px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"}}>
       <h3>CHECK OUT MY PROJECTS</h3>
       <h4>My Works</h4>
+      </motion.div>
+
         <div className='project-cards-container'>
         <Carousel swipeable={false}
           draggable={true}
@@ -49,7 +57,9 @@ const Projects = () => {
           slidesToSlide={1}
           removeArrowOnDeviceType='{["tablet", "mobile", "desktop", "superLargeDesktop"]}'>
         {projects.map((project) => (
-                <div className='project-card-container'>
+                <motion.div className='project-card-container' ref = {ref} style={{transform: isInView ? "none" : "translateY(20px)",
+                opacity: isInView ? 1 : 0,
+                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1s"}}>
                     <div className='project-img'>
                        <a href={project.site} target='_blank'><img src={project.img} className='main-img'></img></a>
                     </div>
@@ -72,7 +82,7 @@ const Projects = () => {
                           <a href={project.source} target='_blank'>SOURCE CODE</a>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             ))}
         </Carousel>
         </div>

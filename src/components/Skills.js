@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import {skills} from '../api/skills';
 import '../styles/skills.css';
+import { motion, useInView } from 'framer-motion';
 
 const Skills = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
     const responsive = {
         superLargeDesktop: {
           // the naming can be any, depends on you.
@@ -36,9 +40,17 @@ const Skills = () => {
   return (
     <>
     <div name='skills' className='skills-section'>
+
+      <div ref = {ref} style={{transform: isInView ? "none" : "translateY(20px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"}}>
       <h3>MY SKILLS SO FAR</h3>
       <h4>What I work on</h4>
-        <div className='cards-container'>
+      </div>
+
+        <motion.div className='cards-container' ref = {ref} style={{transform: isInView ? "none" : "translateY(50px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1s"}}>
         <Carousel swipeable={true}
           draggable={true}
           responsive={responsive}
@@ -62,7 +74,7 @@ const Skills = () => {
                 </div>
             ))}
         </Carousel>
-        </div>
+        </motion.div>
     </div>
     </>
   )

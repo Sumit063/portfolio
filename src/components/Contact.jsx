@@ -1,12 +1,15 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { MailBtn } from './Buttons'
 import { SubscribeBtn } from './Buttons'
 import '../styles/contact.css'
 import { TextField } from '@mui/material'
+import { motion, useInView } from 'framer-motion'
 
 const Contact = () => {
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
 
     const handleSubmit = () => {
         const tick = document.querySelector('.subscribed');
@@ -44,7 +47,9 @@ const Contact = () => {
   return (
     <>
     <div name='contact' className="contact-section">
-        <div className="contact-wrapper">
+        <motion.div className="contact-wrapper" ref = {ref} style={{transform: isInView ? "none" : "translateY(30px)",
+          opacity: isInView ? 1 : 0,
+          transition: "1.2s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"}}>
             <div className="contact-me">
                 <h4>Let's Chat.</h4>
                 <h4 id="contact-txt2">Tell me about your project.</h4>
@@ -80,7 +85,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     </div>
     </>
   )

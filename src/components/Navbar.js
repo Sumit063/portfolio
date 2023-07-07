@@ -22,11 +22,6 @@ const Navbar = (referenece) => {
         } else {
           setVisible(false);
         }
-        // if (scrollY?.current < scrollY?.prev) {
-        //   setHidden(false);
-        // } else if (scrollY?.current > 100 && scrollY?.current > scrollY?.prev) {
-        //   setHidden(true);
-        // }
       }
     
       /** update the onChange callback to call for `update()` **/

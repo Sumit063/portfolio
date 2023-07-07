@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../styles/home.css'
 
 import Header from './Header'
@@ -8,7 +8,7 @@ import Footer from './Footer'
 
 const Home = () => {
   return (
-    <div className='scroll-snapper'>
+    <div className='mouse-shadow'>
     <Header />
     <Main />
     <Footer />
